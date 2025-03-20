@@ -102,7 +102,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bi
 tar -xvzf maven.tar.gz
 ```
 ```bash
-sudo mv apache-maven-3.9.4 /opt/maven
+sudo mv apache-maven-3.9.8 /opt/maven
 ```
 
 ### Abra o arquivo bashrc
@@ -121,5 +121,5 @@ source ~/.bashrc
 
 ## Build maven
 ```bash
-mvn verify.
+mvn verify
 ```
