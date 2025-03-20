@@ -15,3 +15,105 @@ Don't forget to check our [code of conduct](CODE_OF_CONDUCT.md) and our [contrib
 If you find a bug or want to register a feature request please consider discussing it first in our forums, and after you're totally sure, please use the JIRA ticketing system: https://idempiere.atlassian.net
 
 Continuous integration when changing this repository is managed with Jenkins at https://jenkins.idempiere.org/
+
+# Inicialização rápida do sistema para desenvolvimento
+
+## Instale o wsl 
+```bash
+wsl –install
+```
+
+## Configure a chave ssh do git e cadastre a nova chave gerada no github
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+## Configure o usuário
+```bash
+git config --global user.email "you@example.com"
+```
+```bash
+git config --global user.name "Your Name"
+```
+
+## Instale a jdk 17
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install openjdk-17-jdk-headless
+```
+
+## Preparando projeto
+```bash
+git clone git@github.com:LogmeTributos/logmesistema.git
+```
+```bash
+cd logmesistema
+```
+```bash
+git checkout development
+```
+### Inatalando postgresql 15
+```bash
+chmod +x install_postgresql.sh
+```
+```bash
+bash install_postgresql.sh
+```
+### Abrindo o arquivo: /etc/postgresql/15/main/pg_hba.conf
+```bash
+sudo nano /etc/postgresql/15/main/pg_hba.conf
+```
+#### Altere a Linha
+```
+local   all             all                                     peer
+```
+#### Para
+```
+local   all             all                                     scram-sha-256
+```
+### Iniciando o serviço do postgres 
+```bash
+sudo service postgresql reload
+```
+## Criando usuário postgres
+```bash
+sudo su - postgres
+```
+```bash
+psql -U postgres -c "CREATE ROLE adempiere SUPERUSER LOGIN PASSWORD 'adempiere'"
+```
+```bash
+exit
+```
+
+# Instale o Maven 
+```bash
+wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz -O maven.tar.gz
+```
+```bash
+tar -xvzf maven.tar.gz
+```
+```bash
+sudo mv apache-maven-3.9.4 /opt/maven
+```
+
+### Abra o arquivo bashrc
+```bash
+nano ~/.bashrc
+```
+#### Adicione as linhas no final do arquivo
+```
+export M2_HOME=/opt/maven
+export PATH=$M2_HOME/bin:$PATH
+```
+#### Reload no arquivo
+```bash
+source ~/.bashrc
+```
+
+## Build maven
+```bash
+mvn verify.
+```
