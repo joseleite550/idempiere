@@ -52,13 +52,13 @@ sudo apt-get install openjdk-17-jdk-headless
 
 ## Preparando projeto
 ```bash
-git clone git@github.com:LogmeTributos/logmesistema.git
+git clone git@github.com:joseleite550/idempiere.git
 ```
 ```bash
-cd logmesistema
+cd idempiere
 ```
 ```bash
-git checkout development
+git checkout master
 ```
 ### Inatalando postgresql 15
 ```bash
