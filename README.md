@@ -36,10 +36,11 @@ ssh-add ~/.ssh/id_rsa
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
+## Copie a chave gerada e vá para https://github.com/settings/keys
+
 ```bash
 ssh -T git@github.com
 ```
-## Copie a chave gerada e vá para https://github.com/settings/keys
 
 ## Instale a jdk 17
 ```bash
