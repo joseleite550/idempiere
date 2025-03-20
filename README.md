@@ -25,16 +25,12 @@ wsl -–install
 
 ## Configure a chave ssh do git e cadastre a nova chave gerada no github
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
 ```
-
-## Configure o usuário
-```bash
-git config --global user.email "you@example.com"
-```
-```bash
-git config --global user.name "Your Name"
-```
+## Copie a chave gerada e vá para https://github.com/settings/keys
 
 ## Instale a jdk 17
 ```bash
