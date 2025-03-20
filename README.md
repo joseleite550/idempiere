@@ -26,9 +26,18 @@ wsl -–install
 ## Configure a chave ssh do git e cadastre a nova chave gerada no github
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+```bash
 eval "$(ssh-agent -s)"
+```
+```bash
 ssh-add ~/.ssh/id_rsa
+```
+```bash
 cat ~/.ssh/id_rsa.pub
+```
+```bash
+ssh -T git@github.com
 ```
 ## Copie a chave gerada e vá para https://github.com/settings/keys
 
