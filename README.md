@@ -124,11 +124,6 @@ source ~/.bashrc
 mvn verify
 ```
 
-## Criando banco de dados de testes 
-```bash
-bash create_database.sh
-```
-
 # Na home do WSL ~ Rode o comando para instalar e abrir o eclipse
 ```bash
 wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2023-03/R/eclipse-jee-2023-03-R-linux-gtk-x86_64.tar.gz -O eclipse-jee.tar.gz
@@ -141,4 +136,14 @@ sudo apt-get install -y libswt-gtk-4-java
 ```
 ```bash
 eclipse/eclipse
+```
+
+## Criando banco de dados de testes 
+```bash
+bash create_database.sh
+```
+
+## Para apagar banco de dados de testes, rode dentro do projeto
+```bash
+bash drop_database.sh
 ```
