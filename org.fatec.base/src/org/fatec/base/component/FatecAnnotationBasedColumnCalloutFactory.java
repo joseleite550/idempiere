@@ -1,4 +1,4 @@
-package org.logme.base.component;
+package org.fatec.base.component;
 
 import org.adempiere.base.AnnotationBasedColumnCalloutFactory;
 import org.adempiere.base.IColumnCalloutFactory;
@@ -10,11 +10,11 @@ import org.osgi.service.component.annotations.Component;
  *
  */
 @Component(immediate = true, service = IColumnCalloutFactory.class)
-public class LogmeAnnotationBasedColumnCalloutFactory extends AnnotationBasedColumnCalloutFactory {
+public class FatecAnnotationBasedColumnCalloutFactory extends AnnotationBasedColumnCalloutFactory {
 
 	@Override
 	protected String[] getPackages() {
-		return new String[] { "org.logme.callout" };
+		return new String[] { "org.fatec.callout" };
 	}
 
 }

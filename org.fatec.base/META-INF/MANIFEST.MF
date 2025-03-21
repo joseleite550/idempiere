@@ -1,11 +1,18 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Base
-Bundle-SymbolicName: org.logme.base
-Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.fatec.base;singleton:=true
+Bundle-Version: 13.0.0.qualifier
+Import-Package: com.google.gson,
+ com.google.gson.annotations,
+ org.osgi.framework;version="1.10.0",
+ org.osgi.service.event;version="1.4.1"
 Require-Bundle: org.adempiere.base;bundle-version="11.0.0",
  org.adempiere.plugin.utils;bundle-version="11.0.0",
  org.adempiere.ui.zk
 Automatic-Module-Name: org.logme.base
+Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-17
+Service-Component: OSGI-INF/*.xml
+Export-Package: org.fatec.model

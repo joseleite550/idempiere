@@ -1,4 +1,4 @@
-package org.logme.base.component;
+package org.fatec.base.component;
 
 import org.adempiere.webui.factory.AnnotationBasedFormFactory;
 import org.adempiere.webui.factory.IFormFactory;
@@ -10,11 +10,11 @@ import org.osgi.service.component.annotations.Component;
 *
 */
 @Component(immediate = true, service = IFormFactory.class, property = { "service.ranking:Integer=1" })
-public class LogmeAnnotationBasedFormFactory extends AnnotationBasedFormFactory {
+public class FatecAnnotationBasedFormFactory extends AnnotationBasedFormFactory {
 
 	@Override
 	protected String[] getPackages() {
-		return new String[] { "org.logme.form" };
+		return new String[] { "org.fatec.form" };
 	}
 
 }

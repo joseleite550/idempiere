@@ -7,6 +7,5 @@
 		<version>${revision}</version>
 		<relativePath>../org.idempiere.parent/pom.xml</relativePath>
 	</parent>
-	<artifactId>org.logme.base</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<artifactId>org.fatec.base</artifactId>
 </project>
