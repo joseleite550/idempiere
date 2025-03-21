@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Base
+Bundle-SymbolicName: org.logme.base
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.adempiere.base;bundle-version="11.0.0",
+ org.adempiere.plugin.utils;bundle-version="11.0.0",
+ org.adempiere.ui.zk
+Automatic-Module-Name: org.logme.base
+Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-17
