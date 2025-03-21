@@ -58,7 +58,7 @@ git clone git@github.com:joseleite550/idempiere.git
 cd idempiere
 ```
 ```bash
-git checkout master
+git checkout fatec
 ```
 ### Inatalando postgresql 15
 ```bash
